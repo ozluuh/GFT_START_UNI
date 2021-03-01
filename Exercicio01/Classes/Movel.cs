@@ -10,14 +10,14 @@ namespace Exercicio01.Classes
             this.quantidade = quantidade;
             this.valor = valor;
         }
-        public new double calcularValorFinal()
+        public override double calcularValorFinal()
         {
             double resultado = this.valor * this.quantidade;
-            int imposto = 5;
+            double imposto = 0.05;
 
             if (this.quantidade < 10)
             {
-                imposto = 11;
+                imposto = 0.11;
             }
 
             double valorImposto = resultado * (imposto / 100);

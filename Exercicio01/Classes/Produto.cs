@@ -8,7 +8,7 @@ namespace Exercicio01.Classes
 
         public override string ToString()
         {
-            return this.nome + "," + this.quantidade + "," + this.valor;
+            return this.nome + "," + this.quantidade + "," + string.Format("{0:0,0.00}", this.valor);
         }
 
         public Produto() { }
@@ -20,10 +20,10 @@ namespace Exercicio01.Classes
             this.valor = valor;
         }
 
-        public double calcularValorFinal()
+        public virtual double calcularValorFinal()
         {
             double resultado = this.valor * this.quantidade;
-            double valorImposto = resultado * (10 / 100);
+            double valorImposto = resultado * 0.10;
 
             return resultado + valorImposto;
         }

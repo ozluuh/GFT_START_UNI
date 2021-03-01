@@ -10,10 +10,10 @@ namespace Exercicio01.Classes
             this.quantidade = quantidade;
             this.valor = valor;
         }
-        public new double calcularValorFinal()
+        public override double calcularValorFinal()
         {
             double resultado = this.valor * this.quantidade;
-            double valorImposto = resultado * (15 / 100);
+            double valorImposto = resultado * 0.15;
 
             return resultado + valorImposto;
         }

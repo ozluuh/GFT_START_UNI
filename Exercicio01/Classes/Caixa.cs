@@ -13,13 +13,13 @@ namespace Exercicio01.Classes
             for (int i = 0; i < produtos.Length; i++)
             {
                 double valorFinal = produtos[i].calcularValorFinal();
-                
-                Console.WriteLine($"{produtos[i]},valorFinal");
-                
+
+                Console.WriteLine($"{produtos[i]},{string.Format("{0:0,0.00}", valorFinal)}");
+
                 valorTotalProdutos += valorFinal;
             }
 
-            Console.WriteLine($"Total a ser pago: {valorTotalProdutos}");
+            Console.WriteLine($"Total a ser pago: {string.Format("{0:0,0.00}", valorTotalProdutos)}");
         }
     }
 }
